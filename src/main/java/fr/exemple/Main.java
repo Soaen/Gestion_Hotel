@@ -15,7 +15,7 @@ public class Main {
                 "Lavabo","WC, Télévision", "Cabine Douche, Télévision", "WC, Cabine Douche, Télévision", "WC, Salle de bain + Douche, Télévision", "2 pièces, Salle de bain + douche, WC, Télévision"
 
         };
-        int j, i = 0;
+
         System.out.println("Combien de personne êtes-vous ? Max: 4");
         int nbPerso = sc.nextInt();
         while (nbPerso > 4 || nbPerso < 1){
@@ -36,11 +36,17 @@ public class Main {
             nbDesc = sc.nextInt();
         }
 
+
+
+
+
+
+
+        int j, i = 1;
+
         for (int[] tab1D : tabPrix) {
-            j = 0;
+            j = 1;
             for (int val : tab1D) {
-                i++;
-                j++;
                 if(i == nbPerso && j ==nbDesc){
                     if(val != 0){
                         System.out.println("Une chambre est disponible !");
@@ -48,8 +54,9 @@ public class Main {
                     }else{
                         System.out.println("Aucune chambre n'est disponible avec ces caractéristiques !");
                     }
+
                 }
-                i--;
+                j++;
             }
             i++;
         }
