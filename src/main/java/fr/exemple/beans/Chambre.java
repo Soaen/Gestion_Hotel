@@ -1,53 +1,34 @@
 package fr.exemple.beans;
 
-import java.util.Scanner;
+public class Chambre {
+    // attributs de la classe
+    private final int numero;
+    private final int categorie;
+    private final int nbPersonnes;
 
-public class Chambre{
-    static Scanner sc = new Scanner(System.in);
-
-
-
-
-    private int nbChamb, categorie, nbPers;
-
-    public int donnerNumero(){
-        return nbChamb;
+    public Chambre(int numero, int categorie, int nbPersonnes) {
+        this.numero = numero;
+        this.categorie = categorie;
+        this.nbPersonnes = nbPersonnes;
     }
 
-    public int donnerCateg(){
+    public int donnerNumero() {
+        return numero;
+    }
+
+    public int donnerCateg() {
         return categorie;
     }
 
-    public int donnerNbPers(){
-        return nbPers;
+    public int donnerNbPers() {
+        return nbPersonnes;
     }
 
-    public int donnerPrix(int[][] t){
-        int j, i = 1;
-        System.out.println("Combien de personne êtes-vous ? Max: 4");
-        int nbPerso = sc.nextInt();
-        while (nbPerso > 4 || nbPerso < 1){
-            System.out.println("Vous devez au minimum être 1 et au maximum 4 !");
-            System.out.println("Combien de personne êtes-vous ? Max: 4");
-            nbPerso = sc.nextInt();
-        }
-
-        for (int[] tab1D : t) {
-            j = 1;
-            for (int val : tab1D) {
-                if(i == nbPerso){
-                    return val;
-                }
-                j++;
-            }
-            i++;
-        }
-        return 0;
+    public int donnerPrix(int[][] tabPrix) {
+        return (tabPrix[nbPersonnes - 1][categorie - 1]);
     }
-    public String affichDescript(String[] tab){
-        for (String val : tab) {
-            return val;
-        }
-        return "Fin";
+
+    public void affichDescript(String[] tabDescript) {
+        System.out.println("Description : " + tabDescript[categorie - 1]);
     }
 }
