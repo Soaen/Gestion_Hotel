@@ -2,15 +2,17 @@ package fr.exemple.beans;
 
 public class Chambre {
     // attributs de la classe
-    private final int numero;
-    private final int categorie;
-    private final int nbPersonnes;
+    private int numero;
+    private int categorie;
+    private int nbPersonnes;
 
     public Chambre(int numero, int categorie, int nbPersonnes) {
         this.numero = numero;
         this.categorie = categorie;
         this.nbPersonnes = nbPersonnes;
     }
+
+    public Chambre() {}
 
     public int donnerNumero() {
         return numero;

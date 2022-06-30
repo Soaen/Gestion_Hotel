@@ -3,7 +3,10 @@ package fr.exemple;
 import fr.exemple.beans.Chambre;
 import fr.exemple.beans.Hotel;
 
+import java.util.Scanner;
+
 public class Main {
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         int[][] tp = new int[4][6] ;
         tp[0][0] = 100; tp[0][1]=120 ; tp[0][2] = 130; tp[0][3]=150; tp[0][4] = 0;  tp[0][5]=0;
@@ -13,14 +16,43 @@ public class Main {
 
         String[] td = {"Lavabo","WC, television","Cabine douche, television","WC, cabine douche, Television","WC, Salle de bain + douche, Television","2 pièces, WC, Salle de bain + douche, Television" } ;
 
-        Chambre c = new Chambre(1,1,4);
-        System.out.println("Categorie : "+c.donnerCateg());
-        System.out.println("Capacité : "+c.donnerNbPers());
-        System.out.println("Prix : "+c.donnerPrix(tp));
-        c.affichDescript(td);
-        System.out.println(" ");
 
-        Hotel h = new Hotel();
-        h.affichCh(1,tp,td);
+
+//
+//      Recherche de chambre par numéro
+//
+        System.out.println("Quel est le numéro de la chambre que vous cherchez ?");
+        int tempNbChambr = sc.nextInt();
+        Hotel ho = new Hotel();
+        ho.searchCh(tempNbChambr, tp);
+
+
+
+
+
+//        Chambre c = new Chambre(1,1,4);
+//        System.out.println("Categorie : "+c.donnerCateg());
+//        System.out.println("Capacité : "+c.donnerNbPers());
+//        System.out.println("Prix : "+c.donnerPrix(tp));
+//        c.affichDescript(td);
+//        System.out.println(" ");
+
+
+
+//      Recherche de Chambre par nombre de personnes
+//
+//
+//        Hotel h = new Hotel();
+//
+//        System.out.println("Vous cherchez une chambre de combien de personne ? Max: 4");
+//        int tempNbPers = sc.nextInt();
+//        while(tempNbPers < 0 ||tempNbPers > 4){
+//            System.out.println("Il n'y a que des chambres comprises entre 1 et 4 personnes !");
+//            System.out.println("Vous cherchez une chambre de combien de personne ? Max: 4");
+//            tempNbPers = sc.nextInt();
+//        }
+//
+//
+//        h.affichCh(tempNbPers,tp,td);
     }
 }
