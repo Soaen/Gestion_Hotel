@@ -17,6 +17,9 @@ public class ServiceExecutor {
         tp[3][0] = 200; tp[3][1]=230 ; tp[3][2] = 240; tp[3][3]=260; tp[3][4] = 300;  tp[3][5]=400;
         return tp;
     }
+
+//     Création fichier VSC
+
     public void createVSC(){
         FileWriter file;
         try {
@@ -35,10 +38,13 @@ public class ServiceExecutor {
             e.printStackTrace();
         }
     }
+
     public String[] tdAll(){
         return new String[]{"Lavabo","WC, television","Cabine douche, television","WC, cabine douche, Television","WC, Salle de bain + douche, Television","2 pièces, WC, Salle de bain + douche, Television" };
     }
-    //      Recherche de chambre par numéro
+
+//          Recherche de chambre par numéro
+
     public void searchNumber(){
         System.out.println("Quel est le numéro de la chambre que vous cherchez ?");
         int tempNbChambr = sc.nextInt();
@@ -57,7 +63,6 @@ public class ServiceExecutor {
         int tempDesc = sc.nextInt();
         ho.searchDesc(tempDesc, tpAll());
     }
-
 
     //      Recherche de Chambre par nombre de personnes
 
