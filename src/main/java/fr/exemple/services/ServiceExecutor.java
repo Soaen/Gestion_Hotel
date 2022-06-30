@@ -19,8 +19,7 @@ public class ServiceExecutor {
     }
     public void createVSC(){
         FileWriter file;
-        try
-        {
+        try {
             file = new FileWriter("Hotel.csv");
             for(int[] e : tpAll()){
                 for(int el : e){
