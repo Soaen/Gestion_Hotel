@@ -58,4 +58,25 @@ public class Hotel {
             System.out.println("Aucune chambre correspondant à ce numéro n'a été trouvé !");
         }
     }
+
+    public void searchDesc(int nbDesc, int[][] tp){
+        int nbFind = 0;
+        for (Chambre ch: tabCh) {
+            if(ch.donnerCateg() == nbDesc){
+                System.out.println("Chambre : " + ch.donnerNumero());
+                System.out.println("Catégorie : " + ch.donnerCateg());
+                System.out.println("Prix : " + ch.donnerPrix(tp));
+                System.out.println("Nombre de personne : " + ch.donnerNbPers());
+                System.out.println(" ");
+                nbFind++;
+            }
+        }
+
+        if(nbFind == 0){
+            System.out.println("Aucune chambre n'ayant cette description n'a été trouver");
+        }else {
+            System.out.println(nbFind + " Chambres ont été trouvé.");
+        }
+    }
+
 }

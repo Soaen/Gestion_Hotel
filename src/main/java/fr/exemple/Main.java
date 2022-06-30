@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner sc = new Scanner(System.in);
+    static Hotel ho = new Hotel();
     public static void main(String[] args) {
         int[][] tp = new int[4][6] ;
         tp[0][0] = 100; tp[0][1]=120 ; tp[0][2] = 130; tp[0][3]=150; tp[0][4] = 0;  tp[0][5]=0;
@@ -21,12 +22,21 @@ public class Main {
 //
 //      Recherche de chambre par numéro
 //
-        System.out.println("Quel est le numéro de la chambre que vous cherchez ?");
-        int tempNbChambr = sc.nextInt();
-        Hotel ho = new Hotel();
-        ho.searchCh(tempNbChambr, tp);
+//        System.out.println("Quel est le numéro de la chambre que vous cherchez ?");
+//        int tempNbChambr = sc.nextInt();
+//
+//        ho.searchCh(tempNbChambr, tp);
 
 
+//
+//      Recherche de chambre par Description
+//
+        for (int i = 0; i < td.length; i++) {
+            System.out.println( i+1 + " : "+ td[i]);
+        }
+        System.out.println("Quel sont les options que vous souhaitez ?");
+        int tempDesc = sc.nextInt();
+        ho.searchDesc(tempDesc, tp);
 
 
 
@@ -40,8 +50,8 @@ public class Main {
 
 
 //      Recherche de Chambre par nombre de personnes
-//
-//
+
+
 //        Hotel h = new Hotel();
 //
 //        System.out.println("Vous cherchez une chambre de combien de personne ? Max: 4");

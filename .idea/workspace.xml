@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="V.2 Finish">
+    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Ajout de recherche de Chambre par numéro et par nombre de personnes">
       <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Chambre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Chambre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Hotel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656498487391</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ajout de recherche de Chambre par numéro et par nombre de personnes">
+      <created>1656582092107</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1656582092108</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,6 +145,7 @@
     <MESSAGE value="Update Tab" />
     <MESSAGE value="V.2 Start" />
     <MESSAGE value="V.2 Finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="V.2 Finish" />
+    <MESSAGE value="Ajout de recherche de Chambre par numéro et par nombre de personnes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de recherche de Chambre par numéro et par nombre de personnes" />
   </component>
 </project>
