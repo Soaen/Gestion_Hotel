@@ -53,8 +53,7 @@ public class Hotel {
                 System.out.println(" ");
                 nbFind++;
             }
-        }
-        if(nbFind == 0){
+        }if(nbFind == 0){
             System.out.println("Aucune chambre correspondant à ce numéro n'a été trouvé !");
         }
     }
@@ -62,7 +61,7 @@ public class Hotel {
     public void searchDesc(int nbDesc, int[][] tp){
         int nbFind = 0;
         for (Chambre ch: tabCh) {
-            if(ch.donnerCateg() == nbDesc){
+            if (ch.donnerCateg() == nbDesc) {
                 System.out.println("Chambre : " + ch.donnerNumero());
                 System.out.println("Catégorie : " + ch.donnerCateg());
                 System.out.println("Prix : " + ch.donnerPrix(tp));
@@ -70,9 +69,7 @@ public class Hotel {
                 System.out.println(" ");
                 nbFind++;
             }
-        }
-
-        if(nbFind == 0){
+        }if(nbFind == 0){
             System.out.println("Aucune chambre n'ayant cette description n'a été trouver");
         }else {
             System.out.println(nbFind + " Chambres ont été trouvé.");
