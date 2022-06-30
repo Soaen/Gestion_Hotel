@@ -20,7 +20,7 @@ public class ServiceExecutor {
 
 //     Création fichier VSC
 
-    public void createVSC(){
+    public void createCSV(){
         FileWriter file;
         try {
             file = new FileWriter("Hotel.csv");

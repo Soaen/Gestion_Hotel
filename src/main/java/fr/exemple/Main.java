@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         ServiceExecutor se = new ServiceExecutor();
         ServiceMenu sm = new ServiceMenu();
-        se.createVSC();
+        se.createCSV();
         sm.startingMenu();
     }
 }
