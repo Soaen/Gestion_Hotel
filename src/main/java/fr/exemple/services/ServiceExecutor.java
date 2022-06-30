@@ -2,9 +2,11 @@ package fr.exemple.services;
 
 import fr.exemple.beans.Hotel;
 
+import java.io.FileWriter;
 import java.util.Scanner;
 
 public class ServiceExecutor {
+
     Scanner sc = new Scanner(System.in);
     Hotel ho = new Hotel();
     public int[][] tpAll(){
@@ -14,6 +16,25 @@ public class ServiceExecutor {
         tp[2][0] = 170; tp[2][1]=200 ; tp[2][2] = 210; tp[2][3]=230; tp[2][4] = 270;  tp[2][5]=350;
         tp[3][0] = 200; tp[3][1]=230 ; tp[3][2] = 240; tp[3][3]=260; tp[3][4] = 300;  tp[3][5]=400;
         return tp;
+    }
+    public void createVSC(){
+        FileWriter file;
+        try
+        {
+            file = new FileWriter("Hotel.csv");
+            for(int[] e : tpAll()){
+                for(int el : e){
+                    file.append(String.valueOf(el));
+                    file.append(";");
+                }
+                file.append("\n");
+            }
+            file.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
     public String[] tdAll(){
         return new String[]{"Lavabo","WC, television","Cabine douche, television","WC, cabine douche, Television","WC, Salle de bain + douche, Television","2 pièces, WC, Salle de bain + douche, Television" };
@@ -53,4 +74,7 @@ public class ServiceExecutor {
         }
         h.affichCh(tempNbPers,tpAll(),tdAll());
     }
+
+
+
 }
