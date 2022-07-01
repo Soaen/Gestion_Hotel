@@ -9,6 +9,17 @@ public class ServiceExecutor {
 
     Scanner sc = new Scanner(System.in);
     Hotel ho = new Hotel();
+
+    public String[] tdAll(){
+        return new String[]{"Lavabo",
+                "WC, television",
+                "Cabine douche, television",
+                "WC, cabine douche, Television",
+                "WC, Salle de bain + douche, Television",
+                "2 pièces, WC, Salle de bain + douche, Television" };
+    }
+
+
     public int[][] tpAll(){
         int[][] tp = new int[4][6] ;
         tp[0][0] = 100; tp[0][1]=120 ; tp[0][2] = 130; tp[0][3]=150; tp[0][4] = 0;  tp[0][5]=0;
@@ -18,7 +29,9 @@ public class ServiceExecutor {
         return tp;
     }
 
+//
 //     Création fichier VSC
+//
 
     public void createCSV(){
         FileWriter file;
@@ -39,11 +52,9 @@ public class ServiceExecutor {
         }
     }
 
-    public String[] tdAll(){
-        return new String[]{"Lavabo","WC, television","Cabine douche, television","WC, cabine douche, Television","WC, Salle de bain + douche, Television","2 pièces, WC, Salle de bain + douche, Television" };
-    }
-
+//
 //          Recherche de chambre par numéro
+//
 
     public void searchNumber(){
         System.out.println("Quel est le numéro de la chambre que vous cherchez ?");
@@ -64,8 +75,9 @@ public class ServiceExecutor {
         ho.searchDesc(tempDesc, tpAll());
     }
 
-    //      Recherche de Chambre par nombre de personnes
-
+//
+//      Recherche de Chambre par nombre de personnes
+//
     public void searchNbPers(){
         Hotel h = new Hotel();
 

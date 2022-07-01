@@ -1,7 +1,6 @@
 package fr.exemple.beans;
 
 public class Chambre {
-    // attributs de la classe
     private int numero;
     private int categorie;
     private int nbPersonnes;
