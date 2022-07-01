@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Création fichier CSV">
+    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Dependency JDBC Driver">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/ConnectPostgreSQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/libs/postgresql-42.4.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/Main.java" afterDir="false" />
@@ -49,13 +51,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/59013-36-12/Desktop/ojdbc11.jar",
+    "last_opened_file_path": "C:/Users/59013-36-12/IdeaProjects/Gestion_Hotel/src/main/resources/libs/postgresql-42.4.0.jar",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\59013-36-12\IdeaProjects\Gestion_Hotel\src\main\resources\libs" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.exemple.Main" />
@@ -183,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656661287889</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Dependency JDBC Driver">
+      <created>1656676506019</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1656676506019</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,6 +222,7 @@
     <MESSAGE value="Optimisation" />
     <MESSAGE value="Création fichier VSC" />
     <MESSAGE value="Création fichier CSV" />
-    <option name="LAST_COMMIT_MESSAGE" value="Création fichier CSV" />
+    <MESSAGE value="Dependency JDBC Driver" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dependency JDBC Driver" />
   </component>
 </project>
