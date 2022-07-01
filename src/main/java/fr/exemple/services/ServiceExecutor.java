@@ -20,7 +20,7 @@ public class ServiceExecutor {
     }
 
 
-    public int[][] tpAll(){
+    public static int[][] tpAll(){
         int[][] tp = new int[4][6] ;
         tp[0][0] = 100; tp[0][1]=120 ; tp[0][2] = 130; tp[0][3]=150; tp[0][4] = 0;  tp[0][5]=0;
         tp[1][0] = 130; tp[1][1]=160 ; tp[1][2] = 170; tp[1][3]=190; tp[1][4] = 0;  tp[1][5]=0;
@@ -39,6 +39,7 @@ public class ServiceExecutor {
             file = new FileWriter("Hotel.csv");
             for(int[] e : tpAll()){
                 for(int el : e){
+
                     file.append(String.valueOf(el));
                     file.append(";");
                 }

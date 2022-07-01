@@ -1,7 +1,7 @@
 package fr.exemple.beans;
 
 public class Hotel {
-    public Chambre[] tabCh;
+    public static Chambre[] tabCh;
 
     public Hotel() {
         tabCh = new Chambre[31];
@@ -38,8 +38,6 @@ public class Hotel {
         }
         System.out.println("Nombre de chambres : "+nbCh);
     }
-
-
 
     // Recherche de chambre par numéro
     public void searchCh(int nbCham, int[][] tp){
