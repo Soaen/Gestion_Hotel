@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Add Database Category">
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/services/SelectTableNb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/SelectTableNb.java" afterDir="false" />
+    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Code Optimisation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/services/SelectTableNb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/DatabaseManagment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/services/ServiceExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/ServiceExecutor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656940061966</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Code Optimisation">
+      <created>1656942183110</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1656942183110</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,7 +289,8 @@
     <MESSAGE value="Optimisation Code" />
     <MESSAGE value="Stack Trace" />
     <MESSAGE value="Add Database Category" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Database Category" />
+    <MESSAGE value="Code Optimisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code Optimisation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

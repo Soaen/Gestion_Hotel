@@ -1,25 +1,25 @@
 package fr.exemple.beans;
 
-import fr.exemple.services.SelectTableNb;
+import fr.exemple.services.DatabaseManagment;
 
 public class Hotel {
 
 //     Recherche de chambre par numéro avec BDD
 
     public void searchChNbPersonne(int nbCham){
-        SelectTableNb.searchChamberNbPersonne(nbCham);
+        DatabaseManagment.searchChamberNbPersonne(nbCham);
     }
 
 //     Recherche de chambre par numéro avec BDD
 
     public void searchCh(int nbCham){
-        SelectTableNb.searchChamberNumber(nbCham);
+        DatabaseManagment.searchChamberNumber(nbCham);
     }
 
     //     Recherche de chambre par Description avec BDD
 
     public void searchDesc(int nbDesc){
-        SelectTableNb.searchChamberDesc(nbDesc);
+        DatabaseManagment.searchChamberDesc(nbDesc);
     }
 
 //    public static Chambre[] tabCh;

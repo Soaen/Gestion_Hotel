@@ -1,9 +1,9 @@
 package fr.exemple.services;
 
 import java.sql.*;
-public class SelectTableNb {
+public class DatabaseManagment {
 
-    private static final String password = "password";
+    private static final String password = "197532486a";
 
     public static void searchChamberNumber(int id) {
         try {
@@ -120,6 +120,7 @@ public class SelectTableNb {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
 //        Sans BDD Catégorie
 
 //        String temp;
@@ -148,5 +149,30 @@ public class SelectTableNb {
 //        }
 //        System.out.println("Catégorie : " + temp);
 //    }
+    }
+
+
+    public static void showCate(){
+        try {
+            //étape 1 : charger la classe driver
+            Class.forName("org.postgresql.Driver");
+            //étape 2 : créer l'objet de connexion
+            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/", "postgres", password);
+            //étape 3 : créer l'objet statement
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT * FROM tabdescript";
+            ResultSet res = stmt.executeQuery(sql);
+            //étape 5 : extraire les données
+            while (res.next()) {
+                //Récupérer par nom de colonne
+                int nb = res.getInt("numero");
+                String descstring = res.getString("descstring");
+                System.out.println(nb + " : " + descstring);
+            }
+            //étape 6 : fermez l'objet de connexion
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
