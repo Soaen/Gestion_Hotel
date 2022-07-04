@@ -7,7 +7,6 @@ public class Hotel {
 
     public Hotel() {
         tabCh = new Chambre[31];
-        // affectation de valeurs dans le tableau
         tabCh[0] = new Chambre(1,1,1); tabCh[1] = new Chambre(2,2,1);
         tabCh[2] = new Chambre(3,3,1); tabCh[3] = new Chambre(4,4,1);
         tabCh[4] = new Chambre(5,1,2); tabCh[5] = new Chambre(6,2,2);
@@ -26,23 +25,32 @@ public class Hotel {
         tabCh[30] = new Chambre(31,4,2);
     }
 
-    public void affichCh(int PnbPers, int[][] tp, String[] td) {
-        int nbCh = 0;
-        for (int i=0 ; i<31 ; i++) {
-            if (tabCh[i].donnerNbPers()==PnbPers) {
+//    Recherche de chambre par personne sans BDD
 
-                System.out.println("Chambre : "+tabCh[i].donnerNumero());
-                System.out.println("Catégorie : "+tabCh[i].donnerCateg()) ;
-                System.out.println("Prix : " + tabCh[i].donnerPrix(tp));
-                tabCh[i].affichDescript(td);
-                System.out.println(" ");
-                nbCh++;
-            }
-        }
-        System.out.println("Nombre de chambres : "+nbCh);
+//    public void affichCh(int PnbPers, int[][] tp, String[] td) {
+//        int nbCh = 0;
+//        for (int i=0 ; i<31 ; i++) {
+//            if (tabCh[i].donnerNbPers()==PnbPers) {
+//
+//                System.out.println("Chambre : "+tabCh[i].donnerNumero());
+//                System.out.println("Catégorie : "+tabCh[i].donnerCateg()) ;
+//                System.out.println("Prix : " + tabCh[i].donnerPrix(tp));
+//                tabCh[i].affichDescript(td);
+//                System.out.println(" ");
+//                nbCh++;
+//            }
+//        }
+//        System.out.println("Nombre de chambres : "+nbCh);
+//    }
+
+
+    //    Recherche de chambre par personne avec BDD
+
+    public void searchChNbPersonne(int nbCham){
+        SelectTableNb.searchChamberNbPersonne(nbCham);
     }
 
-    // Recherche de chambre par numéro V1
+    // Recherche de chambre par numéro sans BDD
 //    public void searchCh(int nbCham, int[][] tp){
 //        int nbFind = 0;
 //        for (Chambre ch : tabCh) {
@@ -59,27 +67,37 @@ public class Hotel {
 //        }
 //    }
 
-    // Recherche de chambre par numéro V2
-    public void searchCh(int nbCham, int[][] ints){
-        SelectTableNb.searchChamber(nbCham);
+    // Recherche de chambre par numéro avec BDD
+    public void searchCh(int nbCham){
+        SelectTableNb.searchChamberNumber(nbCham);
     }
 
-    public void searchDesc(int nbDesc, int[][] tp){
-        int nbFind = 0;
-        for (Chambre ch: tabCh) {
-            if (ch.donnerCateg() == nbDesc) {
-                System.out.println("Chambre : " + ch.donnerNumero());
-                System.out.println("Catégorie : " + ch.donnerCateg());
-                System.out.println("Prix : " + ch.donnerPrix(tp));
-                System.out.println("Nombre de personne : " + ch.donnerNbPers());
-                System.out.println(" ");
-                nbFind++;
-            }
-        }if(nbFind == 0){
-            System.out.println("Aucune chambre n'ayant cette description n'a été trouver");
-        }else {
-            System.out.println(nbFind + " Chambres ont été trouvé.");
-        }
-    }
 
+
+    // Recherche de chambre par description sans BDD
+//
+//    public void searchDesc(int nbDesc, int[][] tp){
+//        int nbFind = 0;
+//        for (Chambre ch: tabCh) {
+//            if (ch.donnerCateg() == nbDesc) {
+//                System.out.println("Chambre : " + ch.donnerNumero());
+//                System.out.println("Catégorie : " + ch.donnerCateg());
+//                System.out.println("Prix : " + ch.donnerPrix(tp));
+//                System.out.println("Nombre de personne : " + ch.donnerNbPers());
+//                System.out.println(" ");
+//                nbFind++;
+//            }
+//        }if(nbFind == 0){
+//            System.out.println("Aucune chambre n'ayant cette description n'a été trouver");
+//        }else {
+//            System.out.println(nbFind + " Chambres ont été trouvé.");
+//        }
+//    }
+
+
+// Recherche de chambre par description avec BDD
+
+    public void searchDesc(int nbDesc){
+        SelectTableNb.searchChamberDesc(nbDesc);
+    }
 }

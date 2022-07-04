@@ -33,25 +33,25 @@ public class ServiceExecutor {
 //     Création fichier VSC
 //
 
-    public void createCSV(){
-        FileWriter file;
-        try {
-            file = new FileWriter("Hotel.csv");
-            for(int[] e : tpAll()){
-                for(int el : e){
-
-                    file.append(String.valueOf(el));
-                    file.append(";");
-                }
-                file.append("\n");
-            }
-            file.close();
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-    }
+//    public void createCSV(){
+//        FileWriter file;
+//        try {
+//            file = new FileWriter("Hotel.csv");
+//            for(int[] e : tpAll()){
+//                for(int el : e){
+//
+//                    file.append(String.valueOf(el));
+//                    file.append(";");
+//                }
+//                file.append("\n");
+//            }
+//            file.close();
+//        }
+//        catch(Exception e)
+//        {
+//            e.printStackTrace();
+//        }
+//    }
 
 //
 //          Recherche de chambre par numéro
@@ -60,7 +60,12 @@ public class ServiceExecutor {
     public void searchNumber(){
         System.out.println("Quel est le numéro de la chambre que vous cherchez ?");
         int tempNbChambr = sc.nextInt();
-        ho.searchCh(tempNbChambr, tpAll());
+        while(tempNbChambr < 0 ||tempNbChambr > 31){
+            System.out.println("Il n'y a que des options comprises entre 1 et 31 personnes !");
+            System.out.println("Quel est le numéro de la chambre que vous cherchez ?");
+            tempNbChambr = sc.nextInt();
+        }
+        ho.searchCh(tempNbChambr);
     }
 
 //
@@ -73,7 +78,12 @@ public class ServiceExecutor {
         }
         System.out.println("Quel sont les options que vous souhaitez ?");
         int tempDesc = sc.nextInt();
-        ho.searchDesc(tempDesc, tpAll());
+        while(tempDesc < 0 ||tempDesc > 6){
+            System.out.println("Il n'y a que des options comprises entre 1 et 4 personnes !");
+            System.out.println("Quel sont les options que vous souhaitez ?");
+            tempDesc = sc.nextInt();
+        }
+        ho.searchDesc(tempDesc);
     }
 
 //
@@ -89,7 +99,7 @@ public class ServiceExecutor {
             System.out.println("Vous cherchez une chambre de combien de personne ? Max: 4");
             tempNbPers = sc.nextInt();
         }
-        h.affichCh(tempNbPers,tpAll(),tdAll());
+        h.searchChNbPersonne(tempNbPers);
     }
 
 
