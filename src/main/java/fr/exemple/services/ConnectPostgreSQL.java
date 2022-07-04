@@ -37,7 +37,7 @@ public class ConnectPostgreSQL {
 
         }
         catch(Exception e){
-            System.out.println(e);
+            System.out.println("Categ");
         }
     }
 

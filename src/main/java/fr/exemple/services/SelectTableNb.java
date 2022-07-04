@@ -31,7 +31,7 @@ public class SelectTableNb {
             conn.close();
         }
         catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -64,7 +64,7 @@ public class SelectTableNb {
             conn.close();
         }
         catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -96,7 +96,7 @@ public class SelectTableNb {
             conn.close();
         }
         catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
