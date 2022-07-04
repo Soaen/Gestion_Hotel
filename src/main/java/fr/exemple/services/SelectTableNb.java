@@ -2,7 +2,8 @@ package fr.exemple.services;
 
 import java.sql.*;
 public class SelectTableNb {
-    private static final String password = "197532486a";
+
+    private static final String password = "password";
 
     public static void searchChamberNumber(int id) {
         try {
@@ -34,7 +35,6 @@ public class SelectTableNb {
             e.printStackTrace();
         }
     }
-
 
     public static void searchChamberDesc(int id) {
         try {
@@ -120,9 +120,7 @@ public class SelectTableNb {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 //        Sans BDD Catégorie
-
 
 //        String temp;
 //        switch (i) {

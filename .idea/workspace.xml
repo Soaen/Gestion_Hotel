@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Stack Trace">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Add Database Category">
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/services/SelectTableNb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/SelectTableNb.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -238,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656938930941</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add Database Category">
+      <created>1656940061966</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1656940061966</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -271,7 +277,8 @@
     <MESSAGE value="Search All with Database" />
     <MESSAGE value="Optimisation Code" />
     <MESSAGE value="Stack Trace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stack Trace" />
+    <MESSAGE value="Add Database Category" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Database Category" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

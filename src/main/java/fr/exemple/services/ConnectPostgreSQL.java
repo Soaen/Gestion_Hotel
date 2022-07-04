@@ -3,9 +3,6 @@ package fr.exemple.services;
 import java.sql.*;
 
 public class ConnectPostgreSQL {
-
-
-    //étape 2 : créer l'objet de connexion
     static Connection conn;
 
     static {
