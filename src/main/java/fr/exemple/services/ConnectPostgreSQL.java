@@ -5,7 +5,7 @@ import java.sql.*;
 public class ConnectPostgreSQL {
 
 
-    //étape 2: créer l'objet de connexion
+    //étape 2 : créer l'objet de connexion
     static Connection conn;
 
     static {
@@ -20,10 +20,8 @@ public class ConnectPostgreSQL {
     public ConnectPostgreSQL() {
     }
 
-    public static void postgreConnection()
-    {
-        try
-        {
+    public static void postgreConnection() {
+        try {
             //étape 1 : charger la classe de driver
             Class.forName("org.postgresql.Driver");
             //étape 3 : créer l'objet statement

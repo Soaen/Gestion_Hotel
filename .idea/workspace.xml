@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Search Chamber by Number">
+    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Search All with Database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Hotel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/services/ConnectPostgreSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/ConnectPostgreSQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/services/SelectTableNb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/SelectTableNb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/services/ServiceExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/ServiceExecutor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "proofread"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -220,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656928563341</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Search All with Database">
+      <created>1656929772546</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1656929772546</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,7 +255,8 @@
     <MESSAGE value="Initialisation BDD" />
     <MESSAGE value="Remove Password" />
     <MESSAGE value="Search Chamber by Number" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search Chamber by Number" />
+    <MESSAGE value="Search All with Database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search All with Database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
