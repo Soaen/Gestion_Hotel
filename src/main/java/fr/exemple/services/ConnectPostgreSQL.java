@@ -11,7 +11,7 @@ public class ConnectPostgreSQL {
     static {
         try {
             conn = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/","postgres","197532486a");
+                    "jdbc:postgresql://localhost:5432/","postgres","password");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
