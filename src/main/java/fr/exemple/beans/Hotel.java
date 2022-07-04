@@ -1,5 +1,7 @@
 package fr.exemple.beans;
 
+import fr.exemple.services.SelectTableNb;
+
 public class Hotel {
     public static Chambre[] tabCh;
 
@@ -28,6 +30,7 @@ public class Hotel {
         int nbCh = 0;
         for (int i=0 ; i<31 ; i++) {
             if (tabCh[i].donnerNbPers()==PnbPers) {
+
                 System.out.println("Chambre : "+tabCh[i].donnerNumero());
                 System.out.println("Catégorie : "+tabCh[i].donnerCateg()) ;
                 System.out.println("Prix : " + tabCh[i].donnerPrix(tp));
@@ -39,21 +42,26 @@ public class Hotel {
         System.out.println("Nombre de chambres : "+nbCh);
     }
 
-    // Recherche de chambre par numéro
-    public void searchCh(int nbCham, int[][] tp){
-        int nbFind = 0;
-        for (Chambre ch : tabCh) {
-            if (ch.donnerNumero() == nbCham) {
-                System.out.println("Chambre : " + ch.donnerNumero());
-                System.out.println("Catégorie : " + ch.donnerCateg());
-                System.out.println("Prix : " + ch.donnerPrix(tp));
-                System.out.println("Nombre de personne : " + ch.donnerNbPers());
-                System.out.println(" ");
-                nbFind++;
-            }
-        }if(nbFind == 0){
-            System.out.println("Aucune chambre correspondant à ce numéro n'a été trouvé !");
-        }
+    // Recherche de chambre par numéro V1
+//    public void searchCh(int nbCham, int[][] tp){
+//        int nbFind = 0;
+//        for (Chambre ch : tabCh) {
+//            if (ch.donnerNumero() == nbCham) {
+//                System.out.println("Chambre : " + ch.donnerNumero());
+//                System.out.println("Catégorie : " + ch.donnerCateg());
+//                System.out.println("Prix : " + ch.donnerPrix(tp));
+//                System.out.println("Nombre de personne : " + ch.donnerNbPers());
+//                System.out.println(" ");
+//                nbFind++;
+//            }
+//        }if(nbFind == 0){
+//            System.out.println("Aucune chambre correspondant à ce numéro n'a été trouvé !");
+//        }
+//    }
+
+    // Recherche de chambre par numéro V2
+    public void searchCh(int nbCham, int[][] ints){
+        SelectTableNb.searchChamber(nbCham);
     }
 
     public void searchDesc(int nbDesc, int[][] tp){

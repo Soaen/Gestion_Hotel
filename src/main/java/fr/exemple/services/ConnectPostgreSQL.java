@@ -24,13 +24,13 @@ public class ConnectPostgreSQL {
     {
         try
         {
-            //étape 1: charger la classe de driver
+            //étape 1 : charger la classe de driver
             Class.forName("org.postgresql.Driver");
-            //étape 3: créer l'objet statement
+            //étape 3 : créer l'objet statement
             Statement stmt = conn.createStatement();
             ResultSet res = stmt.executeQuery("SELECT * FROM categories");
 
-            //étape 4: exécuter la requête
+            //étape 4 : exécuter la requête
             while(res.next())
                 System.out.println(res.getInt(1) +
                         "  "+res.getString(2) +

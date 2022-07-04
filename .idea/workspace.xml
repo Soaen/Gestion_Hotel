@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Initialisation BDD">
+    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Remove Password">
+      <change afterPath="$PROJECT_DIR$/Hotel.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/SelectTableNb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Hotel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/services/ConnectPostgreSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/ConnectPostgreSQL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,20 +46,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/59013-36-12/IdeaProjects/Gestion_Hotel/src/main/resources/libs/postgresql-42.4.0.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "C:/Users/59013-36-12/IdeaProjects/Gestion_Hotel/src/main/resources/libs/postgresql-42.4.0.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "proofread"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\59013-36-12\IdeaProjects\Gestion_Hotel\src\main\resources\libs" />
@@ -202,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656679831807</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Remove Password">
+      <created>1656920248033</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1656920248033</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,6 +229,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First commit" />
     <MESSAGE value="Update Tab" />
     <MESSAGE value="V.2 Start" />
@@ -229,6 +242,11 @@
     <MESSAGE value="Création fichier CSV" />
     <MESSAGE value="Dependency JDBC Driver" />
     <MESSAGE value="Initialisation BDD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialisation BDD" />
+    <MESSAGE value="Remove Password" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove Password" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
