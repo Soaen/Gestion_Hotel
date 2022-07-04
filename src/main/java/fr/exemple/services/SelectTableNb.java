@@ -2,7 +2,8 @@ package fr.exemple.services;
 
 import java.sql.*;
 public class SelectTableNb {
-    private static final String password = "password";
+    private static final String password = "197532486a";
+
     public static void searchChamberNumber(int id) {
         try {
             //étape 1 : charger la classe driver
@@ -14,7 +15,7 @@ public class SelectTableNb {
             String sql = "SELECT * FROM categories WHERE numero = " + id;
             ResultSet res = stmt.executeQuery(sql);
             //étape 5 : extraire les données
-            while(res.next()){
+            while (res.next()) {
                 //Récupérer par nom de colonne
                 int numero = res.getInt("numero");
                 int categorie = res.getInt("categorie");
@@ -29,8 +30,7 @@ public class SelectTableNb {
             }
             //étape 6 : fermez l'objet de connexion
             conn.close();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -47,7 +47,7 @@ public class SelectTableNb {
             String sql = "SELECT * FROM categories WHERE categorie = " + id;
             ResultSet res = stmt.executeQuery(sql);
             //étape 5 : extraire les données
-            while(res.next()){
+            while (res.next()) {
                 //Récupérer par nom de colonne
                 int numero = res.getInt("numero");
                 int categorie = res.getInt("categorie");
@@ -62,8 +62,7 @@ public class SelectTableNb {
             }
             //étape 6 : fermez l'objet de connexion
             conn.close();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -79,7 +78,7 @@ public class SelectTableNb {
             String sql = "SELECT * FROM categories WHERE nbpersonne = " + id;
             ResultSet res = stmt.executeQuery(sql);
             //étape 5 : extraire les données
-            while(res.next()){
+            while (res.next()) {
                 //Récupérer par nom de colonne
                 int numero = res.getInt("numero");
                 int categorie = res.getInt("categorie");
@@ -94,37 +93,62 @@ public class SelectTableNb {
             }
             //étape 6 : fermez l'objet de connexion
             conn.close();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void cate(int i){
-        String temp;
-        switch (i) {
-            case 1:
-                temp = "Lavabo";
-                break;
-            case 2:
-                temp = "WC, Télévision";
-                break;
-            case 3:
-                temp = "Cabine Douche, Télévision";
-                break;
-            case 4:
-                temp = "WC, Cabine Douche, Télévision";
-                break;
-            case 5:
-                temp = "WC, Salle de bain + Douche, Télévision";
-                break;
-            case 6:
-                temp = "2 pièces, WC, Salle de bain + Douche, Télévision";
-                break;
-            default:
-                temp = "Erreur";
-                break;
+    public static void cate(int id) {
+
+        try {
+            //étape 1 : charger la classe driver
+            Class.forName("org.postgresql.Driver");
+            //étape 2 : créer l'objet de connexion
+            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/", "postgres", password);
+            //étape 3 : créer l'objet statement
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT descstring FROM tabdescript WHERE numero = " + id;
+            ResultSet res = stmt.executeQuery(sql);
+            //étape 5 : extraire les données
+            while (res.next()) {
+                //Récupérer par nom de colonne
+                String descstring = res.getString("descstring");
+                System.out.println("Catégories: " + descstring);
+            }
+            //étape 6 : fermez l'objet de connexion
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        System.out.println("Catégorie : " + temp);
+
+//        Sans BDD Catégorie
+
+
+//        String temp;
+//        switch (i) {
+//            case 1:
+//                temp = "Lavabo";
+//                break;
+//            case 2:
+//                temp = "WC, Télévision";
+//                break;
+//            case 3:
+//                temp = "Cabine Douche, Télévision";
+//                break;
+//            case 4:
+//                temp = "WC, Cabine Douche, Télévision";
+//                break;
+//            case 5:
+//                temp = "WC, Salle de bain + Douche, Télévision";
+//                break;
+//            case 6:
+//                temp = "2 pièces, WC, Salle de bain + Douche, Télévision";
+//                break;
+//            default:
+//                temp = "Erreur";
+//                break;
+//        }
+//        System.out.println("Catégorie : " + temp);
+//    }
     }
 }
