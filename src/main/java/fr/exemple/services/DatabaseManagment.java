@@ -3,7 +3,7 @@ package fr.exemple.services;
 import java.sql.*;
 public class DatabaseManagment {
 
-    private static final String password = "197532486a";
+    private static final String password = "password";
 
     public static void searchChamberNumber(int id) {
         try {
