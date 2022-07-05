@@ -8,6 +8,72 @@ public class ServiceExecutor {
     Scanner sc = new Scanner(System.in);
     Hotel ho = new Hotel();
 
+
+//
+//          Recherche de chambre par numéro
+//
+
+    public void searchNumber(){
+        System.out.println("Quel est le numéro de la chambre que vous cherchez ?");
+        int tempNbChambr = sc.nextInt();
+        while(tempNbChambr < 0 ||tempNbChambr > 31){
+            System.out.println("Il n'y a que des options comprises entre 1 et 31 personnes !");
+            System.out.println("Quel est le numéro de la chambre que vous cherchez ?");
+            tempNbChambr = sc.nextInt();
+        }
+        ho.searchCh(tempNbChambr);
+    }
+
+//
+//      Recherche de chambre par Description
+//
+
+    public void searchDesc(){
+        DatabaseManagment.showCate();
+        System.out.println("Quel sont les options que vous souhaitez ?");
+        int tempDesc = sc.nextInt();
+        while(tempDesc < 0 ||tempDesc > 6){
+            System.out.println("Il n'y a que des options comprises entre 1 et 4 personnes !");
+            System.out.println("Quel sont les options que vous souhaitez ?");
+            tempDesc = sc.nextInt();
+        }
+        ho.searchDesc(tempDesc);
+    }
+
+//
+//      Recherche de Chambre par nombre de personnes
+//
+
+    public void searchNbPers(){
+        Hotel h = new Hotel();
+
+        System.out.println("Vous cherchez une chambre de combien de personne ? Max: 4");
+        int tempNbPers = sc.nextInt();
+        while(tempNbPers < 0 ||tempNbPers > 4){
+            System.out.println("Il n'y a que des chambres comprises entre 1 et 4 personnes !");
+            System.out.println("Vous cherchez une chambre de combien de personne ? Max: 4");
+            tempNbPers = sc.nextInt();
+        }
+        h.searchChNbPersonne(tempNbPers);
+    }
+
+//
+//      Recherche de chambre par Prix
+//
+
+    public void searchPrice(){
+        Hotel h = new Hotel();
+
+        System.out.println("Quel est le prix maximum que vous pouvez mettre ?");
+        int tempNbPers = sc.nextInt();
+        while(tempNbPers < 100){
+            System.out.println("Il n'y a aucune chambre à moins de 100 € !");
+            System.out.println("Quel est le prix maximum que vous pouvez mettre ?");
+            tempNbPers = sc.nextInt();
+        }
+        h.searchDPrice(tempNbPers);
+    }
+
 //    public String[] tdAll(){
 //        return new String[]{"Lavabo",
 //                "WC, television",
@@ -51,52 +117,6 @@ public class ServiceExecutor {
 //        }
 //    }
 
-//
-//          Recherche de chambre par numéro
-//
-
-    public void searchNumber(){
-        System.out.println("Quel est le numéro de la chambre que vous cherchez ?");
-        int tempNbChambr = sc.nextInt();
-        while(tempNbChambr < 0 ||tempNbChambr > 31){
-            System.out.println("Il n'y a que des options comprises entre 1 et 31 personnes !");
-            System.out.println("Quel est le numéro de la chambre que vous cherchez ?");
-            tempNbChambr = sc.nextInt();
-        }
-        ho.searchCh(tempNbChambr);
-    }
-
-//
-//      Recherche de chambre par Description
-//
-
-    public void searchDesc(){
-        DatabaseManagment.showCate();
-        System.out.println("Quel sont les options que vous souhaitez ?");
-        int tempDesc = sc.nextInt();
-        while(tempDesc < 0 ||tempDesc > 6){
-            System.out.println("Il n'y a que des options comprises entre 1 et 4 personnes !");
-            System.out.println("Quel sont les options que vous souhaitez ?");
-            tempDesc = sc.nextInt();
-        }
-        ho.searchDesc(tempDesc);
-    }
-
-//
-//      Recherche de Chambre par nombre de personnes
-//
-    public void searchNbPers(){
-        Hotel h = new Hotel();
-
-        System.out.println("Vous cherchez une chambre de combien de personne ? Max: 4");
-        int tempNbPers = sc.nextInt();
-        while(tempNbPers < 0 ||tempNbPers > 4){
-            System.out.println("Il n'y a que des chambres comprises entre 1 et 4 personnes !");
-            System.out.println("Vous cherchez une chambre de combien de personne ? Max: 4");
-            tempNbPers = sc.nextInt();
-        }
-        h.searchChNbPersonne(tempNbPers);
-    }
 
 
 

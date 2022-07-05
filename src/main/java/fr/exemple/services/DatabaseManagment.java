@@ -10,11 +10,11 @@ import java.util.Properties;
 public class DatabaseManagment {
     public static String getDBInfo(String s) {
         try (InputStream input = new FileInputStream("src/main/resources/config.properties")) {
-
             Properties prop = new Properties();
-
             prop.load(input);
-
+            if (prop.getProperty(s) == null) {
+                System.out.println("La valeur " + s + " n'existe pas !");
+            }
             return prop.getProperty(s);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -24,29 +24,24 @@ public class DatabaseManagment {
 
     public static void searchDatabase(int id, String dataRecover) {
         try {
-            //étape 1 : charger la classe driver
             Class.forName("org.postgresql.Driver");
-            //étape 2 : créer l'objet de connexion
-            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getDBInfo("DB_URL")), Objects.requireNonNull(getDBInfo("DB_USER")),Objects.requireNonNull(getDBInfo("DB_PASSWORD")));
-            //étape 3 : créer l'objet statement
+            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getDBInfo("DB_URL")), Objects.requireNonNull(getDBInfo("DB_USER")), Objects.requireNonNull(getDBInfo("DB_PASSWORD")));
             Statement stmt = conn.createStatement();
             String sql = dataRecover + id;
             ResultSet res = stmt.executeQuery(sql);
-            //étape 5 : extraire les données
             while (res.next()) {
-                //Récupérer par nom de colonne
                 int numero = res.getInt("numero");
                 int categorie = res.getInt("categorie");
                 int nbpersonne = res.getInt("nbpersonne");
                 int prix = res.getInt("prix");
-                //Afficher les valeurs
-                System.out.println("Numéro de Chambre: " + numero);
-                cate(categorie);
-                System.out.println("Nombre de personne: " + nbpersonne);
-                System.out.println("Prix: " + prix);
-                System.out.println(" ");
+                if (prix != 0) {
+                    System.out.println("Numéro de Chambre: " + numero);
+                    cate(categorie);
+                    System.out.println("Nombre de personne: " + nbpersonne);
+                    System.out.println("Prix: " + prix);
+                    System.out.println(" ");
+                }
             }
-            //étape 6 : fermez l'objet de connexion
             conn.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -54,28 +49,40 @@ public class DatabaseManagment {
     }
 
     public static void cate(int id) {
-
         try {
-            //étape 1 : charger la classe driver
             Class.forName("org.postgresql.Driver");
-            //étape 2 : créer l'objet de connexion
-            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getDBInfo("DB_URL")), Objects.requireNonNull(getDBInfo("DB_USER")),Objects.requireNonNull(getDBInfo("DB_PASSWORD")));
-            //étape 3 : créer l'objet statement
+            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getDBInfo("DB_URL")), Objects.requireNonNull(getDBInfo("DB_USER")), Objects.requireNonNull(getDBInfo("DB_PASSWORD")));
             Statement stmt = conn.createStatement();
             String sql = "SELECT descstring FROM tabdescript WHERE numero = " + id;
             ResultSet res = stmt.executeQuery(sql);
-            //étape 5 : extraire les données
             while (res.next()) {
-                //Récupérer par nom de colonne
                 String descstring = res.getString("descstring");
                 System.out.println("Catégories: " + descstring);
             }
-            //étape 6 : fermez l'objet de connexion
             conn.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
 
+    public static void showCate() {
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getDBInfo("DB_URL")), Objects.requireNonNull(getDBInfo("DB_USER")), Objects.requireNonNull(getDBInfo("DB_PASSWORD")));
+            Statement stmt = conn.createStatement();
+            String sql = "SELECT * FROM tabdescript";
+            ResultSet res = stmt.executeQuery(sql);
+            while (res.next()) {
+                int nb = res.getInt("numero");
+                String descstring = res.getString("descstring");
+                System.out.println(nb + " : " + descstring);
+            }
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
 //        Sans BDD Catégorie
 
 //        String temp;
@@ -104,30 +111,3 @@ public class DatabaseManagment {
 //        }
 //        System.out.println("Catégorie : " + temp);
 //    }
-    }
-
-
-    public static void showCate(){
-        try {
-            //étape 1 : charger la classe driver
-            Class.forName("org.postgresql.Driver");
-            //étape 2 : créer l'objet de connexion
-            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getDBInfo("DB_URL")), Objects.requireNonNull(getDBInfo("DB_USER")),Objects.requireNonNull(getDBInfo("DB_PASSWORD")));
-            //étape 3 : créer l'objet statement
-            Statement stmt = conn.createStatement();
-            String sql = "SELECT * FROM tabdescript";
-            ResultSet res = stmt.executeQuery(sql);
-            //étape 5 : extraire les données
-            while (res.next()) {
-                //Récupérer par nom de colonne
-                int nb = res.getInt("numero");
-                String descstring = res.getString("descstring");
-                System.out.println(nb + " : " + descstring);
-            }
-            //étape 6 : fermez l'objet de connexion
-            conn.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-}

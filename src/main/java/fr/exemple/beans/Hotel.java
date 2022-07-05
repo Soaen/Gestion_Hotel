@@ -22,6 +22,10 @@ public class Hotel {
         DatabaseManagment.searchDatabase(nbDesc,"SELECT * FROM categories WHERE categorie = ");
     }
 
+    public void searchDPrice(int nbPrice){
+        DatabaseManagment.searchDatabase(nbPrice,"SELECT * FROM categories WHERE prix <= ");
+    }
+
 //    public static Chambre[] tabCh;
 //
 //    public Hotel() {

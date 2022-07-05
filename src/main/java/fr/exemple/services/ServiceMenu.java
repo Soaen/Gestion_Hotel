@@ -16,7 +16,7 @@ public class ServiceMenu {
             System.out.println("*                                                               *");
             System.out.println("*     3. Recherche de chambre par nombre de personnes           *");
             System.out.println("*                                                               *");
-            System.out.println("*     4. WIP                                                    *");
+            System.out.println("*     4. Rechercher par prix maximum                            *");
             System.out.println("*                                                               *");
             System.out.println("*     5. Quitter le programme                                   *");
             System.out.println("*                                                               *");

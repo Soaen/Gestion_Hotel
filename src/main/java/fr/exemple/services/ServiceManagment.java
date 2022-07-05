@@ -14,7 +14,7 @@ public class ServiceManagment {
                 se.searchNbPers();
                 break;
             case 4:
-                System.out.println("Pas encore disponible !");
+                se.searchPrice();
                 break;
             case 5:
                 System.out.println("Au revoir !");
