@@ -1,16 +1,83 @@
 package fr.exemple.services;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
-public class DatabaseManagment {
+import java.util.Objects;
+import java.util.Properties;
 
-    private static final String password = "password";
+public class DatabaseManagment {
+    public static String getURL(){
+        try (InputStream input = new FileInputStream("src/main/resources/config.properties")) {
+
+                Properties prop = new Properties();
+
+                // load a properties file
+                prop.load(input);
+
+                // get the property value and print it out
+                return prop.getProperty("DB_URL");
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        return null;
+    }
+    public static String getPSWD(){
+        try (InputStream input = new FileInputStream("src/main/resources/config.properties")) {
+
+            Properties prop = new Properties();
+
+            // load a properties file
+            prop.load(input);
+
+            // get the property value and print it out
+            return prop.getProperty("DB_PASSWORD");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
+    public static String getUSRN(){
+        try (InputStream input = new FileInputStream("src/main/resources/config.properties")) {
+
+            Properties prop = new Properties();
+
+            // load a properties file
+            prop.load(input);
+
+            // get the property value and print it out
+            return prop.getProperty("DB_USER");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
+
+    public void dbInfo() {
+        try (InputStream input = new FileInputStream("./resources/config.properties")) {
+
+            Properties prop = new Properties();
+
+            // load a properties file
+            prop.load(input);
+
+            // get the property value and print it out
+            System.out.println(prop.getProperty("db.url"));
+            System.out.println(prop.getProperty("db.user"));
+            System.out.println(prop.getProperty("db.password"));
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
 
     public static void searchChamberNumber(int id) {
         try {
             //étape 1 : charger la classe driver
             Class.forName("org.postgresql.Driver");
             //étape 2 : créer l'objet de connexion
-            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/", "postgres", password);
+            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getURL()), Objects.requireNonNull(getUSRN()),Objects.requireNonNull(getPSWD()));
             //étape 3 : créer l'objet statement
             Statement stmt = conn.createStatement();
             String sql = "SELECT * FROM categories WHERE numero = " + id;
@@ -41,7 +108,7 @@ public class DatabaseManagment {
             //étape 1 : charger la classe driver
             Class.forName("org.postgresql.Driver");
             //étape 2 : créer l'objet de connexion
-            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/", "postgres", password);
+            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getURL()), Objects.requireNonNull(getUSRN()),Objects.requireNonNull(getPSWD()));
             //étape 3 : créer l'objet statement
             Statement stmt = conn.createStatement();
             String sql = "SELECT * FROM categories WHERE categorie = " + id;
@@ -72,7 +139,7 @@ public class DatabaseManagment {
             //étape 1 : charger la classe driver
             Class.forName("org.postgresql.Driver");
             //étape 2 : créer l'objet de connexion
-            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/", "postgres", password);
+            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getURL()), Objects.requireNonNull(getUSRN()),Objects.requireNonNull(getPSWD()));
             //étape 3 : créer l'objet statement
             Statement stmt = conn.createStatement();
             String sql = "SELECT * FROM categories WHERE nbpersonne = " + id;
@@ -104,7 +171,7 @@ public class DatabaseManagment {
             //étape 1 : charger la classe driver
             Class.forName("org.postgresql.Driver");
             //étape 2 : créer l'objet de connexion
-            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/", "postgres", password);
+            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getURL()), Objects.requireNonNull(getUSRN()),Objects.requireNonNull(getPSWD()));
             //étape 3 : créer l'objet statement
             Statement stmt = conn.createStatement();
             String sql = "SELECT descstring FROM tabdescript WHERE numero = " + id;
@@ -157,7 +224,7 @@ public class DatabaseManagment {
             //étape 1 : charger la classe driver
             Class.forName("org.postgresql.Driver");
             //étape 2 : créer l'objet de connexion
-            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/", "postgres", password);
+            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getURL()), Objects.requireNonNull(getUSRN()),Objects.requireNonNull(getPSWD()));
             //étape 3 : créer l'objet statement
             Statement stmt = conn.createStatement();
             String sql = "SELECT * FROM tabdescript";
