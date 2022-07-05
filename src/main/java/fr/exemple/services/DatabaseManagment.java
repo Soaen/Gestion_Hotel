@@ -54,24 +54,6 @@ public class DatabaseManagment {
         return null;
     }
 
-    public void dbInfo() {
-        try (InputStream input = new FileInputStream("./resources/config.properties")) {
-
-            Properties prop = new Properties();
-
-            // load a properties file
-            prop.load(input);
-
-            // get the property value and print it out
-            System.out.println(prop.getProperty("db.url"));
-            System.out.println(prop.getProperty("db.user"));
-            System.out.println(prop.getProperty("db.password"));
-
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
-
     public static void searchChamberNumber(int id) {
         try {
             //étape 1 : charger la classe driver
