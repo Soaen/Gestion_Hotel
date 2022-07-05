@@ -8,7 +8,6 @@ public class ServiceExecutor {
     Scanner sc = new Scanner(System.in);
     Hotel ho = new Hotel();
 
-
 //
 //          Recherche de chambre par numéro
 //

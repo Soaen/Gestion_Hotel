@@ -26,6 +26,8 @@ public class Hotel {
         DatabaseManagment.searchDatabase(nbPrice,"SELECT * FROM categories WHERE prix <= ");
     }
 
+//    Table sans BDD
+//
 //    public static Chambre[] tabCh;
 //
 //    public Hotel() {
