@@ -17,10 +17,13 @@ public class ServiceManagment {
                 se.searchPrice();
                 break;
             case 5:
+                se.addSaisie();
+                break;
+            case 6:
                 System.out.println("Au revoir !");
                 break;
             default:
-                System.out.println("Le nombre doit être compris entre 1 et 3 !");
+                System.out.println("Le nombre doit être compris entre 1 et 6 !");
         }
     }
 }

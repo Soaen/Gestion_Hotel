@@ -4,6 +4,8 @@ import fr.exemple.beans.Hotel;
 
 import java.util.Scanner;
 
+import static fr.exemple.services.DatabaseManagment.showCate;
+
 public class ServiceExecutor {
     Scanner sc = new Scanner(System.in);
     Hotel ho = new Hotel();
@@ -28,7 +30,7 @@ public class ServiceExecutor {
 //
 
     public void searchDesc(){
-        DatabaseManagment.showCate();
+        showCate();
         System.out.println("Quel sont les options que vous souhaitez ?");
         int tempDesc = sc.nextInt();
         while(tempDesc < 0 ||tempDesc > 6){
@@ -71,6 +73,26 @@ public class ServiceExecutor {
             tempNbPers = sc.nextInt();
         }
         h.searchDPrice(tempNbPers);
+    }
+
+    public void addSaisie(){
+        Hotel h = new Hotel();
+        System.out.println("Entrez le numéro associez");
+        int newnum = sc.nextInt();
+        showCate();
+        System.out.println("Entrez la catégorie");
+        int newcate = sc.nextInt();
+        System.out.println("Entrez le nombre de personne (max 4)");
+        int newnbpers = sc.nextInt();
+        while(newnbpers > 4){
+            System.out.println("Maximum de personne: 4");
+            System.out.println("Entrez le nombre de personne (max 4)");
+            newnbpers = sc.nextInt();
+        }
+        System.out.println("Entrez le prix");
+        int newprix = sc.nextInt();
+
+        h.createHSaisie("categories values (" + newnum + "," + newcate + "," + newnbpers + "," + newprix + ");");
     }
 
 //    public String[] tdAll(){

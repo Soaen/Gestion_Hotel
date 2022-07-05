@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Code Optimisation">
+    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Search Max Price">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Hotel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/services/DatabaseManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/DatabaseManagment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/services/ServiceExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/ServiceExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/services/ServiceMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/ServiceMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +56,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.rainbow.brackets"
+    "settings.editor.selected.configurable": "preferences.customizations"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -304,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657023175090</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Search Max Price">
+      <created>1657025302788</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1657025302788</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,7 +346,8 @@
     <MESSAGE value="Add Database Category" />
     <MESSAGE value="Config File" />
     <MESSAGE value="Code Optimisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code Optimisation" />
+    <MESSAGE value="Search Max Price" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search Max Price" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

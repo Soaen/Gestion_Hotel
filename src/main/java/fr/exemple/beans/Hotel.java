@@ -25,6 +25,9 @@ public class Hotel {
     public void searchDPrice(int nbPrice){
         DatabaseManagment.searchDatabase(nbPrice,"SELECT * FROM categories WHERE prix <= ");
     }
+    public void createHSaisie(String s){
+        DatabaseManagment.createSaisie("INSERT INTO " + s);
+    }
 
 //    Table sans BDD
 //

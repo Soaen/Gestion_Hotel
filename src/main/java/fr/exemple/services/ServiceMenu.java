@@ -18,13 +18,15 @@ public class ServiceMenu {
             System.out.println("|                                                               |");
             System.out.println("|     4. Rechercher par prix maximum                            |");
             System.out.println("|                                                               |");
-            System.out.println("|     5. Quitter le programme                                   |");
+            System.out.println("|     5. Ajouter une chambre                                    |");
+            System.out.println("|                                                               |");
+            System.out.println("|     6. Quitter le programme                                   |");
             System.out.println("|                                                               |");
             System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
             System.out.println("Entrez votre choix : ");
             choix = sc.nextInt();
             sc.nextLine();
             sm.firstMenu(choix);
-        }while(choix != 5);
+        }while(choix != 6);
     }
 }

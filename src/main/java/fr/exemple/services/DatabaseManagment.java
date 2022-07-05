@@ -12,9 +12,7 @@ public class DatabaseManagment {
         try (InputStream input = new FileInputStream("src/main/resources/config.properties")) {
             Properties prop = new Properties();
             prop.load(input);
-            if (prop.getProperty(s) == null) {
-                System.out.println("La valeur " + s + " n'existe pas !");
-            }
+            if (prop.getProperty(s) == null) {System.out.println("La valeur " + s + " n'existe pas !");}
             return prop.getProperty(s);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -42,6 +40,18 @@ public class DatabaseManagment {
                     System.out.println(" ");
                 }
             }
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void createSaisie(String dataRecover) {
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getDBInfo("DB_URL")), Objects.requireNonNull(getDBInfo("DB_USER")), Objects.requireNonNull(getDBInfo("DB_PASSWORD")));
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(dataRecover);
             conn.close();
         } catch (Exception e) {
             e.printStackTrace();
