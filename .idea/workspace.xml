@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Code Optimisation">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Config File">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/services/DatabaseManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/DatabaseManagment.java" afterDir="false" />
     </list>
@@ -268,7 +266,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656945376818</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Config File">
+      <created>1657008913224</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1657008913224</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Config File">
+      <created>1657008985427</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1657008985427</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -303,7 +315,8 @@
     <MESSAGE value="Stack Trace" />
     <MESSAGE value="Add Database Category" />
     <MESSAGE value="Code Optimisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code Optimisation" />
+    <MESSAGE value="Config File" />
+    <option name="LAST_COMMIT_MESSAGE" value="Config File" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
