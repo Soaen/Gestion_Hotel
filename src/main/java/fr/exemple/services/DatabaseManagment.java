@@ -13,10 +13,8 @@ public class DatabaseManagment {
 
             Properties prop = new Properties();
 
-            // load a properties file
             prop.load(input);
 
-            // get the property value and print it out
             return prop.getProperty(s);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -24,7 +22,7 @@ public class DatabaseManagment {
         return null;
     }
 
-    public static void searchChamberNumber(int id) {
+    public static void searchDatabase(int id, String dataRecover) {
         try {
             //étape 1 : charger la classe driver
             Class.forName("org.postgresql.Driver");
@@ -32,69 +30,7 @@ public class DatabaseManagment {
             Connection conn = DriverManager.getConnection(Objects.requireNonNull(getDBInfo("DB_URL")), Objects.requireNonNull(getDBInfo("DB_USER")),Objects.requireNonNull(getDBInfo("DB_PASSWORD")));
             //étape 3 : créer l'objet statement
             Statement stmt = conn.createStatement();
-            String sql = "SELECT * FROM categories WHERE numero = " + id;
-            ResultSet res = stmt.executeQuery(sql);
-            //étape 5 : extraire les données
-            while (res.next()) {
-                //Récupérer par nom de colonne
-                int numero = res.getInt("numero");
-                int categorie = res.getInt("categorie");
-                int nbpersonne = res.getInt("nbpersonne");
-                int prix = res.getInt("prix");
-                //Afficher les valeurs
-                System.out.println("Numéro de Chambre: " + numero);
-                cate(categorie);
-                System.out.println("Nombre de personne: " + nbpersonne);
-                System.out.println("Prix: " + prix);
-                System.out.println(" ");
-            }
-            //étape 6 : fermez l'objet de connexion
-            conn.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void searchChamberDesc(int id) {
-        try {
-            //étape 1 : charger la classe driver
-            Class.forName("org.postgresql.Driver");
-            //étape 2 : créer l'objet de connexion
-            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getDBInfo("DB_URL")), Objects.requireNonNull(getDBInfo("DB_USER")),Objects.requireNonNull(getDBInfo("DB_PASSWORD")));
-            //étape 3 : créer l'objet statement
-            Statement stmt = conn.createStatement();
-            String sql = "SELECT * FROM categories WHERE categorie = " + id;
-            ResultSet res = stmt.executeQuery(sql);
-            //étape 5 : extraire les données
-            while (res.next()) {
-                //Récupérer par nom de colonne
-                int numero = res.getInt("numero");
-                int categorie = res.getInt("categorie");
-                int nbpersonne = res.getInt("nbpersonne");
-                int prix = res.getInt("prix");
-                //Afficher les valeurs
-                System.out.println("Numéro de Chambre: " + numero);
-                cate(categorie);
-                System.out.println("Nombre de personne: " + nbpersonne);
-                System.out.println("Prix: " + prix);
-                System.out.println(" ");
-            }
-            //étape 6 : fermez l'objet de connexion
-            conn.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void searchChamberNbPersonne(int id) {
-        try {
-            //étape 1 : charger la classe driver
-            Class.forName("org.postgresql.Driver");
-            //étape 2 : créer l'objet de connexion
-            Connection conn = DriverManager.getConnection(Objects.requireNonNull(getDBInfo("DB_URL")), Objects.requireNonNull(getDBInfo("DB_USER")),Objects.requireNonNull(getDBInfo("DB_PASSWORD")));
-            //étape 3 : créer l'objet statement
-            Statement stmt = conn.createStatement();
-            String sql = "SELECT * FROM categories WHERE nbpersonne = " + id;
+            String sql = dataRecover + id;
             ResultSet res = stmt.executeQuery(sql);
             //étape 5 : extraire les données
             while (res.next()) {

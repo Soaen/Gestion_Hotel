@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Config File">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="21554670-a0a0-48ee-bca1-1b3c76eed3b1" name="Changes" comment="Code Optimisation">
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/beans/Hotel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/exemple/services/DatabaseManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/exemple/services/DatabaseManagment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -280,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657008985427</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Code Optimisation">
+      <created>1657011386859</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1657011386859</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,9 +321,9 @@
     <MESSAGE value="Optimisation Code" />
     <MESSAGE value="Stack Trace" />
     <MESSAGE value="Add Database Category" />
-    <MESSAGE value="Code Optimisation" />
     <MESSAGE value="Config File" />
-    <option name="LAST_COMMIT_MESSAGE" value="Config File" />
+    <MESSAGE value="Code Optimisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code Optimisation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

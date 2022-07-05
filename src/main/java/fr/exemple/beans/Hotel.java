@@ -7,19 +7,19 @@ public class Hotel {
 //     Recherche de chambre par numéro avec BDD
 
     public void searchChNbPersonne(int nbCham){
-        DatabaseManagment.searchChamberNbPersonne(nbCham);
+        DatabaseManagment.searchDatabase(nbCham, "SELECT * FROM categories WHERE nbpersonne = ");
     }
 
 //     Recherche de chambre par numéro avec BDD
 
     public void searchCh(int nbCham){
-        DatabaseManagment.searchChamberNumber(nbCham);
+        DatabaseManagment.searchDatabase(nbCham, "SELECT * FROM categories WHERE numero = ");
     }
 
     //     Recherche de chambre par Description avec BDD
 
     public void searchDesc(int nbDesc){
-        DatabaseManagment.searchChamberDesc(nbDesc);
+        DatabaseManagment.searchDatabase(nbDesc,"SELECT * FROM categories WHERE categorie = ");
     }
 
 //    public static Chambre[] tabCh;
